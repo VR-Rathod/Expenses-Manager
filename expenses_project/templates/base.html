@@ -1,0 +1,21 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenses Sharing App</title>
+    <link rel="stylesheet" href="{% static 'styles.css' %}">
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'user_list' %}">Users</a>
+        <a href="{% url 'add_expense' %}">Add Expense</a>
+        <a href="{% url 'expense_list' %}">Expenses</a>
+    </nav>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>
