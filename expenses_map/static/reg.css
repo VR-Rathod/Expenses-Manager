@@ -1,0 +1,215 @@
+/* Basic reset */
+body, h1, p, a, button, form, input, textarea {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navbar styling */
+.navbar {
+    background-color: #333;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    margin: 0 20px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #e76f51;
+}
+
+/* Main content styling */
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.form-wrapper {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+    text-align: center;
+}
+
+h1 {
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    color: #333;
+}
+
+/* Form container styling */
+.form-container {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.form-group {
+    width: 100%;
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 14px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: #e76f51;
+    outline: none;
+}
+
+/* Help text styling */
+.form-group .help-text {
+    display: block;
+    font-size: 14px;
+    color: #777;
+    margin-top: 5px;
+}
+
+/* Button styling */
+.btn {
+    background-color: #e76f51;
+    color: #fff;
+    border: none;
+    padding: 14px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-btn {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #f4a261;
+    transform: scale(1.05);
+}
+
+/* Link container styling */
+.link-container {
+    margin-top: 20px;
+}
+
+.link-container a {
+    color: #e76f51;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link-container a:hover {
+    text-decoration: underline;
+}
+
+/* Information message */
+.info-message {
+    margin-top: 20px;
+    font-size: 16px;
+    color: #555;
+}
+
+/* Popup styling */
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2000;
+}
+
+.popup-content {
+    background: #fff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+    position: relative;
+}
+
+.popup-icon {
+    font-size: 50px;
+    color: #e76f51;
+    margin-bottom: 20px;
+}
+
+.popup-content h2 {
+    margin: 0 0 20px;
+    font-size: 28px;
+    color: #333;
+}
+
+.popup-content p {
+    margin-bottom: 20px;
+    font-size: 18px;
+    color: #555;
+}
+
+.popup-content button {
+    background-color: #e76f51;
+    color: #fff;
+    border: none;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.popup-content button:hover {
+    background-color: #f4a261;
+}
+
+/* Hidden class */
+.hidden {
+    display: none;
+}

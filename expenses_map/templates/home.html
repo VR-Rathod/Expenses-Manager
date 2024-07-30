@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Expenses Sharing Application Tutorial</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'home.css' %}">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="container">
+            <a href="{% url 'home' %}" class="nav-link">Home</a>
+            <div class="nav-buttons">
+                <button class="btn" onclick="window.location.href='{% url 'login' %}'">Login</button>
+                <button class="btn" onclick="window.location.href='{% url 'register' %}'">Register</button>
+            </div>
+        </div>
+    </nav>
+    <div class="main-content">
+        <div class="container">
+            <h1 class="title">Welcome to the Daily Expenses Sharing Application</h1>
+            <div class="tutorial-content">
+                <h2 class="section-title">Objective:</h2>
+                <p class="fade-in">This tutorial will guide you through designing a daily-expenses sharing application. The application allows users to manage and share expenses efficiently, offering multiple splitting methods and generating downloadable balance sheets.</p>
+                
+                <h2 class="section-title">Features:</h2>
+                
+                <div class="feature">
+                    <h3 class="feature-title">User Management:</h3>
+                    <ul class="feature-list">
+                        <li><strong>Email:</strong> Each user must have a unique email address.</li>
+                        <li><strong>Name:</strong> Users must provide their full name.</li>
+                        <li><strong>Mobile Number:</strong> Users need to input a valid mobile number.</li>
+                    </ul>
+                </div>
+                
+                <div class="feature">
+                    <h3 class="feature-title">Expense Management:</h3>
+                    <p class="fade-in">Users can manage expenses with the following split methods:</p>
+                    <ul class="feature-list">
+                        <li><strong>Equal:</strong> Split expenses equally among all participants.</li>
+                        <li><strong>Exact:</strong> Specify the exact amount each participant owes.</li>
+                        <li><strong>Percentage:</strong> Specify the percentage each participant owes, ensuring the total adds up to 100%.</li>
+                    </ul>
+                    
+                    <h4 class="feature-title">Expense Calculation Examples:</h4>
+                    <p class="fade-in"><strong>Equal Split:</strong> If you go out with 3 friends and the total bill is 3000, each friend owes 1000.</p>
+                    <p class="fade-in"><strong>Exact Split:</strong> If you go shopping with 2 friends and pay 4299, Friend 1 owes 799, Friend 2 owes 2000, and you owe 1500.</p>
+                    <p class="fade-in"><strong>Percentage Split:</strong> If you attend a party with 2 friends and one of your cousins, and you owe 50%, Friend 1 owes 25%, and Friend 2 owes 25%.</p>
+                </div>
+                
+                <div class="feature">
+                    <h3 class="feature-title">Balance Sheet:</h3>
+                    <ul class="feature-list">
+                        <li><strong>Individual Expenses:</strong> Display each user's expenses separately.</li>
+                        <li><strong>Overall Expenses:</strong> Show the cumulative expenses for all users.</li>
+                        <li><strong>Download Feature:</strong> Provide an option to download the balance sheet in a convenient format.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

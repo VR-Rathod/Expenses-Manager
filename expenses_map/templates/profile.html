@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'profile.css' %}">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-left">
+                    <span class="greeting">Hello, {{ user.username }}!</span>
+                </div>
+                <div class="nav-right">
+                    <a href="{% url 'home' %}" class="nav-link">Logout</a>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="profile-section">
+            <h1>Your Profile</h1>
+            <div class="profile-details">
+                <div class="profile-item">
+                    <strong>Username:</strong> <span>{{ user.username }}</span>
+                </div>
+                <div class="profile-item">
+                    <strong>Email:</strong> <span>{{ user.email }}</span>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="{% url 'expense_tracker' %}" class="button">Go to Expense Tracker</a>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

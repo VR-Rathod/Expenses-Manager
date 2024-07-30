@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Daily Expenses</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'expenses.css' %}">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="{% url 'home' %}" class="nav-link">Home</a>
+            <a href="{% url 'profile' %}" class="nav-link">Profile</a>
+            <span class="nav-profile">{{ user.username }}</span>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h1>Expense Tracker</h1>
+
+        <!-- Add Person Section -->
+        <fieldset>
+            <legend>Add Person</legend>
+            <button id="addPersonBtn">Add Person</button>
+            <div id="peopleList"></div>
+        </fieldset>
+
+        <!-- Add Expense Section -->
+        <fieldset>
+            <legend>Add Expense</legend>
+            <form id="expenseForm" method="post">
+                {% csrf_token %}
+                <label for="expenseDescription">Expense Description:</label>
+                <input type="text" id="expenseDescription" name="description" placeholder="Expense description" required>
+
+                <label for="expenseAmount">Expense Amount:</label>
+                <input type="number" id="expenseAmount" name="amount" placeholder="Amount" required>
+
+                <label for="expenseMethod">Split Method:</label>
+                <select id="expenseMethod" name="method">
+                    <option value="exact">Exact</option>
+                    <option value="percentage">Percentage</option>
+                    <option value="equal">Equal</option>
+                </select>
+
+                <div id="splitInputs"></div>
+
+                <button type="submit" id="addExpenseBtn">Add Expense</button>
+            </form>
+            <div id="formMessage"></div> <!-- To display success or error messages -->
+        </fieldset>
+
+        <!-- Download Balance Sheet Section -->
+        <fieldset>
+            <legend>Balance Sheet</legend>
+            <button id="downloadBalanceSheetBtn">Download Balance Sheet</button>
+        </fieldset>
+
+        <!-- Balance Sheet Display -->
+        <div id="balanceSheet">
+            <h2>Balance Sheet</h2>
+            <div id="individualExpenseList"></div>
+            <div id="totalExpenseAmount"></div>
+            <div id="splitMethodDetails"></div>
+        </div>
+    </div>
+
+    <script src="{% static 'script.js' %}"></script>
+</body>
+</html>

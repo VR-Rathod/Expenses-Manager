@@ -1,0 +1,137 @@
+/* Basic reset */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Global styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Navigation bar */
+.navbar {
+    background-color: #333;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.navbar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.nav-link {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-link:hover {
+    color: #e76f51;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.btn {
+    background-color: #e76f51;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn:hover {
+    background-color: #f4a261;
+    transform: scale(1.05);
+}
+
+/* Main content */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 80vh;
+    padding: 20px;
+}
+
+.container {
+    width: 90%;
+    max-width: 1000px;
+}
+
+/* Title styling */
+.title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+}
+
+/* Tutorial content */
+.tutorial-content {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section titles */
+.section-title {
+    font-size: 2em;
+    color: #e76f51;
+    margin-bottom: 10px;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Feature title */
+.feature-title {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #333;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Feature list */
+.feature-list {
+    list-style: disc;
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+.feature-list li {
+    margin-bottom: 10px;
+}
+
+/* Fade-in text animation */
+.fade-in {
+    animation: fadeIn 1s ease-out;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
