@@ -47,11 +47,8 @@ To get started with the Daily Expenses Sharing Application, follow these steps:
    
    pip install -r requirements.txt
    ```
-   cd Used for Windows for go to THat dir
-
-   And
-
-   requirements.txt will avelable in Dir
+   Here,
+   cd Used for Windows for go to That dir And requirements.txt will avelable in Dir
 
 4. **Run the Project**:
    Start the Django development server with:
